@@ -3,27 +3,24 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package seguridad.vista;
+package ventas.vista;
 
 import java.awt.Dimension;
-import javax.swing.JOptionPane;
-import seguridad.controlador.clsUsuarioConectado;
-
 
 /**
  *
  * @author visitante
  */
-public class mdiGeneral extends javax.swing.JFrame {
- int codigoAplicacion=8;
+public class mdiVentas extends javax.swing.JFrame {
+
     /**
      * Creates new form MdiGeneral
      */
-    public mdiGeneral() {
+    public mdiVentas() {
         initComponents();
         setLocationRelativeTo(null);
-        this.setExtendedState(mdiGeneral.MAXIMIZED_BOTH);
-        this.setTitle("Módulo Seguridad");
+        this.setExtendedState(mdiVentas.MAXIMIZED_BOTH);
+        this.setTitle("Ejemplo Capas");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 
@@ -38,26 +35,19 @@ public class mdiGeneral extends javax.swing.JFrame {
 
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
-        jMenu7 = new javax.swing.JMenu();
         jDesktopPane1 = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        mCierreSesion = new javax.swing.JMenuItem();
-        jMenu4 = new javax.swing.JMenu();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jM_MantenimientopApps = new javax.swing.JMenu();
-        jMenu6 = new javax.swing.JMenu();
-        jMenu8 = new javax.swing.JMenu();
         jMenu3 = new javax.swing.JMenu();
+        jMenuItem4 = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+        jMenu4 = new javax.swing.JMenu();
+        jMenu5 = new javax.swing.JMenu();
+        jMenu6 = new javax.swing.JMenu();
 
         jMenuItem1.setText("jMenuItem1");
 
         jMenuItem2.setText("jMenuItem2");
-
-        jMenu2.setText("jMenu2");
-
-        jMenu7.setText("jMenu7");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -73,40 +63,36 @@ public class mdiGeneral extends javax.swing.JFrame {
         );
 
         jMenu1.setText("Archivo");
-
-        mCierreSesion.setText("Cierre sesión");
-        mCierreSesion.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mCierreSesionActionPerformed(evt);
-            }
-        });
-        jMenu1.add(mCierreSesion);
-
         jMenuBar1.add(jMenu1);
 
-        jMenu4.setText("Catalogos");
-
-        jMenuItem3.setText("Mantenimiento Usuarios");
-        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+        jMenu3.setText("Catalogos");
+        jMenu3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem3ActionPerformed(evt);
+                jMenu3ActionPerformed(evt);
             }
         });
-        jMenu4.add(jMenuItem3);
 
+        jMenuItem4.setText("Mantenimiento Clientes");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem4);
+
+        jMenuBar1.add(jMenu3);
+
+        jMenu2.setText("Procesos");
+        jMenuBar1.add(jMenu2);
+
+        jMenu4.setText("Informes");
         jMenuBar1.add(jMenu4);
 
-        jM_MantenimientopApps.setText("Procesos");
-        jMenuBar1.add(jM_MantenimientopApps);
+        jMenu5.setText("Herramientas");
+        jMenuBar1.add(jMenu5);
 
-        jMenu6.setText("Reportes");
+        jMenu6.setText("Ayuda");
         jMenuBar1.add(jMenu6);
-
-        jMenu8.setText("Ayudas");
-        jMenuBar1.add(jMenu8);
-
-        jMenu3.setText("Herramientas");
-        jMenuBar1.add(jMenu3);
 
         setJMenuBar(jMenuBar1);
 
@@ -118,30 +104,25 @@ public class mdiGeneral extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktopPane1, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addComponent(jDesktopPane1)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-        frmMantenimientoUsuarios ventana = new frmMantenimientoUsuarios();
+    private void jMenu3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu3ActionPerformed
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_jMenu3ActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        // TODO add your handling code here:
+        frmMantenimientoCliente ventana = new frmMantenimientoCliente();
         jDesktopPane1.add(ventana);
         Dimension desktopSize = jDesktopPane1.getSize();
         Dimension FrameSize = ventana.getSize();
-        ventana.setLocation((desktopSize.width - FrameSize.width) / 2, (desktopSize.height - FrameSize.height) / 2);        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem3ActionPerformed
-
-    private void mCierreSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mCierreSesionActionPerformed
-        int respuesta_cs = JOptionPane.showConfirmDialog(this, "¿Desea Cerrar Sesión?", "Cerrar Sesión", JOptionPane.YES_NO_OPTION);
-
-        if (respuesta_cs == 0) {
-            this.dispose();
-   
-        }
-      
-        
-    }//GEN-LAST:event_mCierreSesionActionPerformed
+        ventana.setLocation((desktopSize.width - FrameSize.width) / 2, (desktopSize.height - FrameSize.height) / 2);
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -160,53 +141,36 @@ public class mdiGeneral extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(mdiGeneral.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(mdiVentas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(mdiGeneral.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(mdiVentas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(mdiGeneral.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(mdiVentas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(mdiGeneral.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(mdiVentas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new mdiGeneral().setVisible(true);
+                new mdiVentas().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDesktopPane jDesktopPane1;
-    public javax.swing.JMenu jM_MantenimientopApps;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
-    public javax.swing.JMenu jMenu4;
-    public javax.swing.JMenu jMenu6;
-    private javax.swing.JMenu jMenu7;
-    private javax.swing.JMenu jMenu8;
+    private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenu jMenu5;
+    private javax.swing.JMenu jMenu6;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
-    public javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem mCierreSesion;
+    private javax.swing.JMenuItem jMenuItem4;
     // End of variables declaration//GEN-END:variables
 }
