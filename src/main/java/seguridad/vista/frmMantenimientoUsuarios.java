@@ -74,8 +74,8 @@ int codigoAplicacion=1;
         txtTelefono.setText(usuarioAConsultar.getUsutelefono());
         txtDireccion.setText(usuarioAConsultar.getUsudireccion());
         txtTipo.setText(usuarioAConsultar.getUsutipo());
-        daoBitacora bitacora = new  daoBitacora();
-        bitacora.insert(clsUsuarioConectado.getUsuid(), codigoAplicacion, "Select");
+    
+  
     }
 
     public frmMantenimientoUsuarios() {
@@ -403,8 +403,8 @@ int codigoAplicacion=1;
         clsUsuario usuarioAEliminar = new clsUsuario();
         usuarioAEliminar.setUsuid(Integer.parseInt(txtbuscado.getText()));
         usuarioDAO.delete(usuarioAEliminar);
-        daoBitacora bitacora = new  daoBitacora();
-        bitacora.insert(clsUsuarioConectado.getUsuid(), codigoAplicacion, "Delete");
+      
+       
         llenadoDeTablas();
     }//GEN-LAST:event_btnEliminarActionPerformed
 
@@ -421,8 +421,7 @@ int codigoAplicacion=1;
         usuarioAInsertar.setUsudireccion(txtDireccion.getText());
         usuarioAInsertar.setUsutipo(txtTipo.getText());
         usuarioDAO.insert(usuarioAInsertar);
-        daoBitacora bitacora = new  daoBitacora();
-        bitacora.insert(clsUsuarioConectado.getUsuid(), codigoAplicacion, "Insert");
+
         llenadoDeTablas();
     }//GEN-LAST:event_btnRegistrarActionPerformed
 
@@ -446,8 +445,8 @@ int codigoAplicacion=1;
         usuarioAActualizar.setUsudireccion(txtDireccion.getText());
         usuarioAActualizar.setUsutipo(txtTipo.getText());
         usuarioDAO.update(usuarioAActualizar);
-        daoBitacora bitacora = new  daoBitacora();
-        bitacora.insert(clsUsuarioConectado.getUsuid(), codigoAplicacion, "Update");
+  
+
         llenadoDeTablas();
     }//GEN-LAST:event_btnModificarActionPerformed
 

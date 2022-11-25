@@ -30,7 +30,7 @@ public class daoAcceso {
     private void Usuario(){
         mdiGeneral mdi= new mdiGeneral();
         mdi.jMenuItem3.setVisible(false);
-        mdi.jMenuItem6.setVisible(false);
+ 
         mdi.setVisible(true);
     }
     

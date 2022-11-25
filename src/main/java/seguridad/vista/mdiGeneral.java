@@ -137,8 +137,7 @@ public class mdiGeneral extends javax.swing.JFrame {
 
         if (respuesta_cs == 0) {
             this.dispose();
-              daoBitacora bitacora = new daoBitacora();
-            bitacora.insert(clsUsuarioConectado.getUsuid(), codigoAplicacion, "logoff");
+   git
         }
       
         
